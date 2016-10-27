@@ -1,0 +1,308 @@
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.miti.ardronecontrollerlite.mjpeg.MjpegView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/VideoStream"/>
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/takeoff"
+        android:id="@+id/TakeoffButton"
+        android:layout_alignParentBottom="true"
+        android:textOff="Takeoff"
+        android:textOn="Land"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_above="@+id/TakeoffButton"
+        android:weightSum="1">
+
+        <com.example.miti.ardronecontrollerlite.JoyStickClass
+            android:layout_width="wrap_content"
+            android:layout_height="269dp"
+            android:id="@+id/joystickclass"
+            android:layout_weight="0.93" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_weight="1.10">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/video_stream"
+                android:id="@+id/button2"
+                android:onClick="onTestVideoStreamClick"/>
+
+            <Button
+                android:layout_width="298dp"
+                android:layout_height="wrap_content"
+                android:text="@string/calibrate"
+                android:id="@+id/button4"
+                android:onClick="onCalibrateDroneClick"
+                android:layout_gravity="right" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stop"
+                android:id="@+id/button3"
+                android:onClick="onStopClick"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/up"
+                    android:id="@+id/button5"
+                    android:layout_above="@+id/button"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onUpClick" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clockwise"
+                    android:id="@+id/button8"
+                    android:layout_above="@+id/button"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onClockwiseRotateClick" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Down"
+                    android:id="@+id/button6"
+                    android:layout_above="@+id/button"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onDownClick" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="CounterClockwise"
+                    android:id="@+id/button7"
+                    android:layout_above="@+id/button"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onCounterClockwiseRotateClick" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout> -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <com.example.miti.ardronecontrollerlite.mjpeg.MjpegView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/VideoStream"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="#00000000">
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button2"
+                android:onClick="onTestVideoStreamClick"
+                android:layout_weight="1"
+                android:src="@drawable/drone"
+                android:background="#00000000" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button3"
+                android:onClick="onStopClick"
+                android:src="@drawable/stop"
+                android:layout_weight="1"
+                android:background="#f77777" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button4"
+                android:onClick="onCalibrateDroneClick"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/propeller"
+                android:background="#00000000"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="15dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="342dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.99">
+
+                <com.example.miti.ardronecontrollerlite.JoyStickClass
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:id="@+id/joystickclass"
+                    android:layout_weight="0.93" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button5"
+                        android:onClick="onUpClick"
+                        android:src="@drawable/arrowup"
+                        android:background="#00000000"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button7"
+                        android:onClick="onCounterClockwiseRotateClick"
+                        android:src="@drawable/leftrotate"
+                        android:background="#00000000"
+                        android:layout_gravity="left"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button8"
+                        android:onClick="onClockwiseRotateClick"
+                        android:src="@drawable/rightrotate"
+                        android:layout_gravity="right"
+                        android:background="#00000000"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button6"
+                        android:background="#00000000"
+                        android:onClick="onDownClick"
+                        android:src="@drawable/arrowdown" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@drawable/ic_slide_switch_off"
+                android:layout_weight=".05"
+                android:layout_gravity="bottom" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/takeoff"
+                android:id="@+id/TakeoffButton"
+                android:textOff="Takeoff"
+                android:textOn="Land"
+                android:layout_weight="1"
+                android:layout_gravity="bottom" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@drawable/ic_slide_switch_on"
+                android:layout_weight=".05"
+                android:layout_gravity="bottom" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
